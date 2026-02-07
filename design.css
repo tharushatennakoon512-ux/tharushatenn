@@ -1,0 +1,83 @@
+/* 1. The Noir Background */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Pure black background makes the B&W photo pop */
+    background-color: #000000; 
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* 2. The Dark Glass Card */
+.glass-card {
+    width: 90%;
+    max-width: 500px; /* Slightly wider for the rectangular photo */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.03); /* Very dark transparency */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px; /* Sharper corners to match the car's lines */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+}
+
+/* 3. The Rectangular B&W Image */
+.profile-img {
+    width: 100%; /* Spans the width of the card */
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 12px; /* Slightly rounded to fit the glass vibe */
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Subtle grayscale filter just in case the upload isn't pure B&W */
+    filter: grayscale(100%) contrast(1.1); 
+}
+
+/* 4. Typography (Monochrome) */
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-transform: uppercase; /* Tech/Automotive feel */
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    color: #888; /* Greyed out secondary text */
+    font-size: 0.9rem;
+    margin-top: 8px;
+    text-transform: uppercase;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #444, transparent);
+    margin: 25px 0;
+}
+
+/* 5. The Links (Silver Style) */
+.links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.links a:hover {
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
